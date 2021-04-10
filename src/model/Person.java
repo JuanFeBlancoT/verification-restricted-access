@@ -2,10 +2,30 @@ package model;
 
 public class Person {
 
-	private String idType;
-	private long idNumber;
+	private IdType idType; 			//The type of the id which can be TI, CC, PP or CE
+	private String idNumber; 			//Number of identification
 	
-	public Person(String idType, long idNumber) {
+	public Person(IdType idType, String idNumber) {
 		
+		this.idNumber = idNumber;
+		this.idType = idType;
 	}
+	
+	//Getters and setters	
+	public String getType() {
+		return idType.getType();
+	}
+
+	public void setType(IdType type) {
+		this.idType = type;
+	}
+
+	public String getIdNumber() {
+		return idNumber;
+	}
+
+	public void setIdNumber(String idNumber) {
+		this.idNumber = idNumber;
+	}
+	
 }
