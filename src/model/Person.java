@@ -5,10 +5,10 @@ public class Person {
 	private IdType idType; 			//The type of the id which can be TI, CC, PP or CE
 	private String idNumber; 			//Number of identification
 	
-	public Person(IdType idType, String idNumber) {
+	public Person(String idType, String idNumber) {
 		
 		this.idNumber = idNumber;
-		this.idType = idType;
+		this.idType = IdType.valueOf(idType);
 	}
 	
 	//Getters and setters	

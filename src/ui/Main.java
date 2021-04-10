@@ -52,14 +52,13 @@ public class Main {
 				try {
 					market.addPerson(idType, idNumber);
 				} catch (InsuficientAgeException | InvalidDateException e) {
-
-					e.printStackTrace();
+					System.out.println(e.toString());
+					//e.printStackTrace();
 				}
-				
 				
 				break;
 			case 2:
-				System.out.println("La cantidad de las personas que han intentado ingresar al mercado son: " + 1);
+				System.out.println("La cantidad de las personas que han intentado ingresar al mercado son: " + market.getAttempts());
 				break;
 			case 3:
 				running = false;
@@ -113,6 +112,9 @@ public class Main {
 				e.printStackTrace();
 			}
 			
+			if(idNumber.length()<8) {
+				System.out.println("Este número de cédula no es válido");
+			}
 			//----
 	}//end verifyNewPerson
 	
