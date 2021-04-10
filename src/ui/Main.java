@@ -3,6 +3,7 @@ package ui;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.time.LocalDate;
 
 import exceptions.InsuficientAgeException;
 import exceptions.InvalidDateException;
@@ -50,7 +51,8 @@ public class Main {
 			case 1:
 				verifyNewPerson();
 				try {
-					market.addPerson(idType, idNumber);
+					int day = LocalDate.now().getDayOfMonth();
+					market.addPerson(idType, idNumber, day);
 				} catch (InsuficientAgeException | InvalidDateException e) {
 					System.out.println(e.toString());
 					//e.printStackTrace();
