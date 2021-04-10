@@ -49,7 +49,7 @@ public class Main {
 			
 			switch(optionSelected) {
 			case 1:
-				verifyNewPerson();
+				addNewPerson();
 				try {
 					int day = LocalDate.now().getDayOfMonth();
 					market.addPerson(idType, idNumber, day);
@@ -71,7 +71,7 @@ public class Main {
 		}
 	}//end mainMenu
 
-	private static void verifyNewPerson() {
+	private static void addNewPerson() {
 		int idTypeOption = -1;
 		
 		System.out.println("\nIngrese el tipo de identidficación:\n"+
